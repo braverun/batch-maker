@@ -1,0 +1,58 @@
+{{outlet}}
+
+<form action="accept">
+
+    <h4>Basic Information</h4>
+
+    <!--recipe title area-->
+
+    <button class="addPhoto">Add Photo</button>
+    <input type="text" placeholder="Recipe Name">
+    <input type="text" placeholder="Chef Name">
+
+    <!--recipe type, cook time, prep time, and temp selector-->
+
+    <select id="recipeType" class="recipeType" name="Type">
+
+        <option value="breakfast" name="breakfast">Breakfast</option>
+        <option value="lunch" name="lunch">Lunch</option>
+        <option value="dinner" name="dinner">Dinner</option>
+        <option value="just desserts" name="desserts">Desserts</option>
+    </select>
+
+    <input type="text" class="prepTime" placeholder="Prep Time">
+    <input type="text" class="cookTime" placeholder="Cook Time">
+
+    <input type="text" class="tempDenom">
+    <select id="tempSel" name="tempSel">
+        <option value="farenheit">F</option>
+        <option value="celcius">C</option>
+    </select>
+
+    <!--recipe yield/qty-->
+
+    <h4>This Recipe Will Make</h4>
+        <input type="recipeYield" placeholder="Amount">
+        <input type="recipeProduct" placeholder="cookies, loaves, etc">
+
+        <!--measurements & prep-->
+
+    <h4>Step 1</h4>
+       <input type="text" class="qtyofMeasure">
+       <select id="unitofMeas" class="unitofMeasure" name="unitofMeasure">
+            <option value="cups" name="cups">Cups</option>
+            <option value="pints" name="pints">Pints</option>
+            <option value="ounces" name="ounces">Ounces</option>
+       </select>
+
+       <select id="" class="amtIngredient" name="">
+            <option value="unit" name="unit">Unit</option>
+       </select>
+
+       <input class="directions" type="text">
+       <button class="addStep">Add Another Step</button>
+
+    <h4>Personal Notes</h4>
+        <input type="persNotes" class="personalNotes">
+        <button class="saveRecipe">Save This Recipe!</button>
+</form>
