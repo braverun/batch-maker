@@ -1,30 +1,29 @@
 {{outlet}}
 
-<form action="accept">
+<form>
 
     <h4>Basic Information</h4>
 
     <!--recipe title area-->
 
-    <button class="addPhoto">Add Photo</button>
-    <input type="text" placeholder="Recipe Name">
-    <input type="text" placeholder="Chef Name">
+    <!-- <button class="addPhoto">Add Photo</button> -->
+    {{input type="text" placeholder="Recipe Name" value=recipeName}}
+    {{input type="text" placeholder="Chef Name" value=chefName}}
 
     <!--recipe type, cook time, prep time, and temp selector-->
 
-    <select id="recipeType" class="recipeType" name="Type">
-
-        <option value="breakfast" name="breakfast">Breakfast</option>
-        <option value="lunch" name="lunch">Lunch</option>
-        <option value="dinner" name="dinner">Dinner</option>
-        <option value="just desserts" name="desserts">Desserts</option>
+    <select id="recipeType" class="recipeType">
+        <option value="breakfast">Breakfast</option>
+        <option value="lunch" >Lunch</option>
+        <option value="dinner" >Dinner</option>
+        <option value="just desserts">Desserts</option>
     </select>
 
-    <input type="text" class="prepTime" placeholder="Prep Time">
-    <input type="text" class="cookTime" placeholder="Cook Time">
+    {{input type="text" value=prepTime placeholder="Prep Time"}}
+    {{input type="text" value=cookTime placeholder="Cook Time"}}
 
-    <input type="text" class="tempDenom">
-    <select id="tempSel" name="tempSel">
+    {{input type="text" placeholder="Cook Temp" value=cookTemp}}
+    <select id="tempSel">
         <option value="farenheit">F</option>
         <option value="celcius">C</option>
     </select>
@@ -32,27 +31,27 @@
     <!--recipe yield/qty-->
 
     <h4>This Recipe Will Make</h4>
-        <input type="recipeYield" placeholder="Amount">
-        <input type="recipeProduct" placeholder="cookies, loaves, etc">
+        {{input type=placeholder="Servings" value=recipeYield}}
+        {{input type="text" value=recipeProduct placeholder="cookies, loaves, etc"}}
 
         <!--measurements & prep-->
 
     <h4>Step 1</h4>
-       <input type="text" class="qtyofMeasure">
-       <select id="unitofMeas" class="unitofMeasure" name="unitofMeasure">
-            <option value="cups" name="cups">Cups</option>
-            <option value="pints" name="pints">Pints</option>
-            <option value="ounces" name="ounces">Ounces</option>
+       {{input placeholder="Amount" type="text" value=qtyOfMeasure }}
+       <select id="unitofMeas" class="unitofMeasure">
+            <option value="unit">Unit</option>
+            <option value="cups">Cups</option>
+            <option value="pints">Pints</option>
+            <option value="ounces" >Ounces</option>
        </select>
 
-       <select id="" class="amtIngredient" name="">
-            <option value="unit" name="unit">Unit</option>
-       </select>
+       {{input placeholder="Ingredient" type="text" value=ingredients}}
+       <button class="addIngredient">+</button>
 
-       <input class="directions" type="text">
-       <button class="addStep">Add Another Step</button>
+       <textarea placeholder="Directions" calss="directions" rows="8" cols="40"></textarea>
+       <button class="addStep">Add Step</button>
 
     <h4>Personal Notes</h4>
-        <input type="persNotes" class="personalNotes">
-        <button class="saveRecipe">Save This Recipe!</button>
+        {{textarea placeholder="Chef Notes" value=personalNotes }}
+        <input type="submit" value="Save This Recipe" {{action: "saveRecipe"}}>
 </form>
