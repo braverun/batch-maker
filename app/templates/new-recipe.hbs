@@ -31,7 +31,7 @@
     <!--recipe yield/qty-->
 
     <h4>This Recipe Will Make</h4>
-        {{input type=placeholder="Servings" value=recipeYield}}
+        {{input type="text" placeholder="Servings" value=recipeYield }}
         {{input type="text" value=recipeProduct placeholder="cookies, loaves, etc"}}
 
         <!--measurements & prep-->
@@ -53,5 +53,5 @@
 
     <h4>Personal Notes</h4>
         {{textarea placeholder="Chef Notes" value=personalNotes }}
-        <input type="submit" value="Save This Recipe" {{action: "saveRecipe"}}>
+        <input type="submit" value="Save This Recipe" {{action "saveRecipe" }}>
 </form>
