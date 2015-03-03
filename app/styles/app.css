@@ -1,0 +1,56 @@
+/****************************************************
+    Base styles
+  **************************************************/
+body {
+  margin: 0 auto;
+  font: sans-serif;
+  color: #6b6b6b; }
+
+/****************************************************
+    Recipe Page styles below
+  **************************************************/
+.heading {
+  margin-top: 50px;
+  margin-right: auto;
+  margin-left: auto;
+  padding: 5px;
+  font-size: 2em;
+  text-align: center; }
+
+.author-text {
+  text-align: center;
+  font-size: 0.8em; }
+
+.image-div {
+  margin: 0 auto;
+  width: 800px;
+  height: 400px;
+  background: #bfbfbf; }
+
+.info-bar-wrap {
+  margin: 20px auto;
+  width: 800px;
+  text-align: center; }
+
+.recipe-type-div,
+.prep-time-div,
+.cook-time-div,
+.cook-temp-div {
+  display: inline-block;
+  width: 140px;
+  height: 47px;
+  margin: 0;
+  padding: 20px;
+  border: 1px solid #bfbfbf;
+  line-height: 1.2em; }
+
+.bar-title-text {
+  margin: 0;
+  padding: 0;
+  font-size: .6em; }
+
+.bar-info-text {
+  margin: 0;
+  padding: 0; }
+
+/*# sourceMappingURL=app.css.map */

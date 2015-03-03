@@ -1,0 +1,91 @@
+//@import "bower_components/bourbon/app/assets`/stylesheets/bourbon";
+
+
+//@import "bower_components/neat/app/assets/stylesheets/neat";
+
+
+$max-width: 800px;
+$image-height: $max-width/2;
+
+$main-heading-size: 2em;
+$h4-size: .8em;
+
+
+$image-background-color: #bfbfbf;
+$primary-font-color: #6b6b6b;
+
+
+/****************************************************
+    Base styles
+  **************************************************/
+
+body {
+  margin: 0 auto;
+  font: sans-serif;
+  color: $primary-font-color;
+}
+
+/****************************************************
+    Recipe Page styles below
+  **************************************************/
+
+.heading {
+  margin-top: 50px;
+  margin-right: auto;
+  margin-left: auto;
+  padding: 5px;
+  font-size: $main-heading-size;
+  text-align: center;
+}
+
+.author-text {
+  text-align: center;
+  font-size: $h4-size;
+}
+
+.image-div {
+  margin: 0 auto;
+  width: $max-width;
+  height: $image-height;
+  background: $image-background-color;
+}
+
+.content-wrap {
+//@include outer-container;
+}
+
+.info-bar-wrap {
+  margin: 20px auto;
+  width: $max-width;
+  text-align: center;
+}
+.recipe-type-div,
+.prep-time-div,
+.cook-time-div,
+.cook-temp-div {
+  //@include span-columns(3);
+  display: inline-block;
+  width: 140px;
+  height: 47px;
+  margin: 0;
+  padding: 20px;
+  border: 1px solid $image-background-color;
+  line-height: 1.2em;
+}
+.cook-temp-div {
+  //@include omega();
+}
+
+.bar-title-text {
+  margin: 0;
+  padding: 0;
+  font-size: .6em;
+}
+
+.bar-info-text {
+  margin: 0;
+  padding: 0;
+}
+
+
+
