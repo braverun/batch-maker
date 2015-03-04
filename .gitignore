@@ -18,3 +18,4 @@ testem.log
 
 app/styles/bourbon/*
 app/styles/neat/*
+app/syles/.sass-cache
