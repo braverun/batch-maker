@@ -12,11 +12,11 @@
 
     <!--recipe type, cook time, prep time, and temp selector-->
 
-    <select id="recipeType" class="recipeType">
+    <select id="recipeType" value=recipeType >
         <option value="breakfast">Breakfast</option>
         <option value="lunch" >Lunch</option>
         <option value="dinner" >Dinner</option>
-        <option value="just desserts">Desserts</option>
+        <option value="desserts">Desserts</option>
     </select>
 
     {{input type="text" value=prepTime placeholder="Prep Time"}}
@@ -37,7 +37,7 @@
         <!--measurements & prep-->
 
     <h4>Step 1</h4>
-       {{input placeholder="Amount" type="text" value=qtyOfMeasure }}
+       {{input placeholder="Amount" type="text" value=ingredientAmount }}
        <select id="unitofMeas" class="unitofMeasure">
             <option value="unit">Unit</option>
             <option value="cups">Cups</option>
@@ -45,13 +45,13 @@
             <option value="ounces" >Ounces</option>
        </select>
 
-       {{input placeholder="Ingredient" type="text" value=ingredients}}
+       {{input placeholder="Ingredient" type="text" value=ingredientType}}
        <button class="addIngredient">+</button>
 
-       <textarea placeholder="Directions" calss="directions" rows="8" cols="40"></textarea>
+       {{textarea placeholder="Directions" value=directions rows="8" cols="40"}}
        <button class="addStep">Add Step</button>
 
     <h4>Personal Notes</h4>
-        {{textarea placeholder="Chef Notes" value=personalNotes }}
+        {{textarea placeholder="Chef Notes" value=chefNotes rows="8" cols="40"}}
         <input type="submit" value="Save This Recipe" {{action "saveRecipe" }}>
 </form>
