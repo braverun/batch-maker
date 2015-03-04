@@ -2,6 +2,8 @@ import Ember from 'ember';
 
 export default Ember.Controller.extend({
     mealType: ["Breakfast", "Lunch", "Dinner", "Dessert"],
+    tempDenom: ["F", "C"],
+    unitOfMeasure: ["Cups", "Pints", "Lbs", "Oz", "Litres"],
 	actions: {
 		saveRecipe: function() {
 			var recipeName = this.get('recipeName');
