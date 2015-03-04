@@ -18,10 +18,8 @@
     {{input type="text" value=cookTime placeholder="Cook Time"}}
 
     {{input type="text" placeholder="Cook Temp" value=cookTemp}}
-    <select id="tempSel">
-        <option value="farenheit">F</option>
-        <option value="celcius">C</option>
-    </select>
+
+    {{view "select" content=tempDenom}}
 
     <!--recipe yield/qty-->
 
@@ -33,12 +31,8 @@
 
     <h4>Step 1</h4>
        {{input placeholder="Amount" type="text" value=ingredientAmount }}
-       <select id="unitofMeas" class="unitofMeasure">
-            <option value="unit">Unit</option>
-            <option value="cups">Cups</option>
-            <option value="pints">Pints</option>
-            <option value="ounces" >Ounces</option>
-       </select>
+
+       {{view "select" content=unitOfMeasure}}
 
        {{input placeholder="Ingredient" type="text" value=ingredientType}}
        <button class="addIngredient">+</button>
