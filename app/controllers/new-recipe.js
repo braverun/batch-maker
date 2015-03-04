@@ -1,6 +1,7 @@
 import Ember from 'ember';
 
 export default Ember.Controller.extend({
+    mealType: ["Breakfast", "Lunch", "Dinner", "Dessert"],
 	actions: {
 		saveRecipe: function() {
 			var recipeName = this.get('recipeName');
@@ -16,9 +17,8 @@ export default Ember.Controller.extend({
 			var ingredientType = this.get('ingredientType');
 			var directions = this.get('directions');
 			var chefNotes = this.get('chefNotes');
-			console.log(recipeName, chefName, recipeType, prepTime, cookTime, cookTemp, recipeYield,
-				recipeProduct, ingredientAmount, ingredientType, directions, chefNotes);
+			console.log(recipeName, chefName, recipeType, prepTime, cookTime, cookTemp, recipeYield, recipeProduct, ingredientAmount, ingredientType, directions, chefNotes);
 		}
-	}
-
+        }
 });
+
