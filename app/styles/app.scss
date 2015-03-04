@@ -1,0 +1,236 @@
+@import "bower_components/bourbon/app/assets/stylesheets/bourbon";
+
+
+@import "bower_components/neat/app/assets/stylesheets/neat";
+
+
+$max-width: 800px;
+$image-width: 1000px;
+$image-height: $max-width/2;
+
+$main-heading-size: 2em;
+$h2-size: .8em;
+$h4-size: .6em;
+
+
+$image-background-color: #bfbfbf;
+$primary-font-color: #6b6b6b;
+
+
+/****************************************************
+    Base styles and Positioning
+  **************************************************/
+
+body {
+  margin: 0 auto;
+  font: sans-serif;
+  color: $primary-font-color;
+}
+
+a,
+li {
+    text-decoration: none;
+    list-style: none;
+}
+
+.content-wrap {
+  margin-bottom: 100px;
+}
+
+
+
+
+
+/****************************************************
+    Recipe Page styles below
+  **************************************************/
+
+.heading {
+  margin-top: 50px;
+  margin-right: auto;
+  margin-left: auto;
+  padding: 5px;
+  font-size: $main-heading-size;
+  text-align: center;
+}
+
+.author-text {
+  text-align: center;
+  font-size: $h4-size;
+}
+
+.image-div {
+  margin: 0 auto;
+  width: $image-width;
+  height: $image-height;
+  background: $image-background-color;
+}
+
+.content-wrap {
+@include outer-container;
+max-width: $max-width;
+}
+
+.info-bar-wrap {
+@include span-columns(12);
+  margin: 20px auto;
+  text-align: center;
+  margin: 40px auto;
+}
+
+.recipe-type-div,
+.prep-time-div,
+.cook-time-div,
+.cook-temp-div {
+  @include span-columns(3 of 12);
+  display: inline-block;
+  width: 25%;
+  height: 47px;
+  margin: 0;
+
+  border: 1px solid $image-background-color;
+  line-height: 1.2em;
+}
+.cook-temp-div {
+  //@include omega();
+}
+
+.bar-title-text {
+  margin: 0;
+  padding: 0;
+  font-size: $h4-size;
+}
+
+.bar-info-text {
+  margin: 0;
+  padding: 0;
+  font-size: $h2-size;
+  }
+
+  .ingredients-wrap {
+  @include span-columns(12);
+  position: relative;
+  }
+
+.ingredients-header-wrap {
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
+  border: 1px solid #e0e0e0;
+  vertical-align: middle;
+
+}
+
+  .ingredients-ul li,
+  .ingredients-ul h3,
+  .ingredients-header-wrap h3,
+  .adjust-button {
+    display: inline-block;
+  }
+
+  .ingredients-header-wrap h3 {
+  width: 70%;
+  margin-top: 0;
+  margin-bottom: 0;
+  margin-left: 10px;
+  line-height: 60px;
+  }
+
+  .adjust-button {
+    position: absolute;
+    right: 10px;
+    vertical-align: middle;
+  }
+
+  .ingredients-ul li {
+  margin: 0;
+  padding: 0;
+  width: $max-width;
+  border: 1px solid #e0e0e0;
+  }
+
+  .ingredient-ul li {
+    border-right: 1px solid #e0e0e0;
+  }
+
+.ingredient-measurement,
+.ingredient-name {
+  display:inline-block;
+}
+
+.ingredient-measurement {
+  width: 25%;
+  padding-right: 10px;
+  border-right: 1px solid #e0e0e0;
+  line-height: 60px;
+  text-align: right;
+}
+
+.ingredient-name {
+  padding-left: 20px;
+}
+
+.steps-ul li {
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+  max-width: $max-width;
+  list-style: none;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.steps-ul li:last-child {
+  border: none;
+}
+
+.step-text,
+.step-ingredients,
+.ingredient-measurement-small,
+.ingredient-name-small {
+  display: inline-block;
+}
+
+.step-text,
+.step-ingredients {
+  vertical-align: top;
+}
+
+.step-ingredients li {
+  display: block;
+  vertical-align: top;
+  margin: 0;
+  padding: 0;
+}
+
+.step-text {
+  width: 60%;
+}
+
+.ingredient-name-small {
+  border-left: 1px solid black;
+}
+
+.start-button {
+  float: right;
+  width: 175px;
+  height: 60px;
+  border-radius: 10px;
+  background: #a2a2a2;
+  border: 1px solid #6d6d6d;
+  color: #fff;
+  font-size: 1em;
+}
+
+.recipe-edit-button {
+  float: right;
+  background: none;
+  border: none;
+  line-height: 60px;
+  font-size: 1em;
+  color: $primary-font-color;
+}
+
+
+
+
+
+
