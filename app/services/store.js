@@ -1,5 +1,6 @@
 import Ember from 'ember';
-import IdentityMap from '../models/identity-map';
+
+import IdentityMap from '../lib/identity-map';
 
 var identityMap = IdentityMap.create();
 
@@ -27,6 +28,13 @@ export default Ember.Object.extend({
       return identityMap.get(name);
     });
   },
+
+
+  findQuery: function(name, query){
+    var adapter = this.container.lookup('adapter:' + name);
+    return adapter.findQuery(name, query);
+  },
+
 
   destroy: function(name, record) {
     var adapter = this.container.lookup('adapter:' + name);
