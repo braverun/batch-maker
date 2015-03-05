@@ -1,4 +1,5 @@
 import Ember from 'ember';
+
 import IdentityMap from '../lib/identity-map';
 
 var identityMap = IdentityMap.create();
@@ -28,10 +29,12 @@ export default Ember.Object.extend({
     });
   },
 
+
   findQuery: function(name, query){
     var adapter = this.container.lookup('adapter:' + name);
     return adapter.findQuery(name, query);
   },
+\\ added fixes to store.js, added models/identity-map to go with store.js fixes
 
   destroy: function(name, record) {
     var adapter = this.container.lookup('adapter:' + name);

@@ -19,8 +19,31 @@ export default Ember.Controller.extend({
 			var ingredientType = this.get('ingredientType');
 			var directions = this.get('directions');
 			var chefNotes = this.get('chefNotes');
-			console.log(recipeName, chefName, recipeType, prepTime, cookTime, cookTemp, recipeYield, recipeProduct, ingredientAmount, ingredientType, directions, chefNotes);
+			// console.log(recipeName, chefName, recipeType, prepTime, c
+			// 	ookTime, cookTemp, recipeYield, recipeProduct, ingredientAmount,
+			// 	ingredientType, directions, chefNotes);
+
+
+		var recipe = {
+			recipeName: recipeName,
+			chefName: chefName,
+			recipeType: recipeType,
+			prepTime: prepTime,
+			cookTime: cookTime,
+			cookTemp: cookTemp,
+			recipeYield: recipeYield,
+			recipeProduct: recipeProduct,
+			ingredientAmount: ingredientAmount,
+			ingredientType: ingredientType,
+			directions: directions,
+			chefNotes: chefNotes
+
+		};
+
+
+		this.store.save('new-recipe', this.get('model'));
+
 		}
-        }
+	}
 });
 
