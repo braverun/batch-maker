@@ -6,6 +6,7 @@ export default Ember.Controller.extend({
     unitOfMeasure: ["Cups", "Pints", "Lbs", "Oz", "Litres"],
 	actions: {
 		saveRecipe: function() {
+			var self = this;
 			var recipeName = this.get('recipeName');
 			var chefName = this.get('chefName');
 			var recipeType = this.get('recipeType');
@@ -41,7 +42,8 @@ export default Ember.Controller.extend({
 		};
 
 
-		this.store.save('new-recipe', this.get('model'));
+		// this.store.save('new-recipe', this.modelFor('recipe'));
+		// });
 
 		}
 	}
