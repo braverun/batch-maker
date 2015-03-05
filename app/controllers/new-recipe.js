@@ -4,6 +4,7 @@ export default Ember.Controller.extend({
     mealType: ["Breakfast", "Lunch", "Dinner", "Dessert"],
     tempDenom: ["F", "C"],
     unitOfMeasure: ["Cups", "Pints", "Lbs", "Oz", "Litres"],
+
 	actions: {
 		saveRecipe: function() {
 			var self = this;
@@ -41,9 +42,10 @@ export default Ember.Controller.extend({
 
 		};
 
+		console.log(recipe.recipeName);
 
-		// this.store.save('new-recipe', this.modelFor('recipe'));
-		// });
+
+		this.store.save('recipe', recipe);
 
 		}
 	}
