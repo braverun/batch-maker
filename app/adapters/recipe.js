@@ -1,7 +1,7 @@
 import ajax from 'ic-ajax';
 import Ember from 'ember';
 
-// TODO: reverse id -> objectId for POST/PUT
+// Recipe: reverse id -> objectId for POST/PUT
 
 export default Ember.Object.extend({
   find: function(name, id){
