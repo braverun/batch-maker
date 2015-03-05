@@ -34,7 +34,7 @@ export default Ember.Object.extend({
     var adapter = this.container.lookup('adapter:' + name);
     return adapter.findQuery(name, query);
   },
-\\ added fixes to store.js, added models/identity-map to go with store.js fixes
+
 
   destroy: function(name, record) {
     var adapter = this.container.lookup('adapter:' + name);
