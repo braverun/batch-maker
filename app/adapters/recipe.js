@@ -40,19 +40,11 @@ export default Ember.Object.extend({
     });
   },
 
-  destroy: function(name, record) {
-    /* jshint unused: false */
-    return ajax({
-      url: "https://api.parse.com/1/classes/Bookmark/" + record.id,
-      type: "DELETE"
-    });
-  },
-
   save: function(name, record) {
     /* jshint unused: false */
     if(record.id) {
       return ajax({
-        url: "https://api.parse.com/1/classes/Bookmark/" + record.id,
+        url: "https://api.parse.com/1/classes/Recipes/" + record.id,
         type: "PUT",
         data: JSON.stringify(record)
       }).then(function(response) {
@@ -62,7 +54,7 @@ export default Ember.Object.extend({
       });
     } else {
       return ajax({
-        url: "https://api.parse.com/1/classes/Bookmark",
+        url: "https://api.parse.com/1/classes/Recipes",
         type: "POST",
         data: JSON.stringify(record)
       }).then(function(response) {
