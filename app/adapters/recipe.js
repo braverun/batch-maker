@@ -1,6 +1,7 @@
 import ajax from 'ic-ajax';
 import Ember from 'ember';
 
+
 // Recipe: reverse id -> objectId for POST/PUT
 
 export default Ember.Object.extend({
@@ -26,10 +27,25 @@ export default Ember.Object.extend({
     });
   },
 
-destroy: function(name, record) {
+  findQuery: function(name, query) {
+    /* jshint unused: false */
+    return ajax("https://api.parse.com/1/classes/Bookmark", {
+      data: Ember.$.param({
+              where: JSON.stringify(query)
+            })
+    }).then(function(response){
+      return response.results.map(function(bookmark) {
+        bookmark.id = bookmark.objectId;
+        delete bookmark.objectId;
+        return bookmark;
+      });
+    });
+  },
+
+  destroy: function(name, record) {
     /* jshint unused: false */
     return ajax({
-      url: "https://api.parse.com/1/classes/Recipes/" + record.id,
+      url: "https://api.parse.com/1/classes/Bookmark/" + record.id,
       type: "DELETE"
     });
   },
